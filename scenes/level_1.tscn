@@ -1,0 +1,423 @@
+[gd_scene load_steps=16 format=3 uid="uid://bx4t1gb2e5g5v"]
+
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_35wsd"]
+[ext_resource type="PackedScene" uid="uid://cddd2ypna7gro" path="res://scenes/up.tscn" id="2_vr3me"]
+[ext_resource type="PackedScene" uid="uid://bmeuuj3nq26em" path="res://scenes/left.tscn" id="3_h33bk"]
+[ext_resource type="PackedScene" uid="uid://81tj423v3wc2" path="res://scenes/right.tscn" id="4_uspm8"]
+[ext_resource type="AudioStream" uid="uid://derxq22qti4fl" path="res://assets/snap.wav" id="5_4uq4r"]
+[ext_resource type="AudioStream" uid="uid://vo6ap01u1f41" path="res://assets/songs/level1.mp3" id="6_gc6gd"]
+[ext_resource type="Theme" uid="uid://dvog7oiq35usr" path="res://themes/labels.tres" id="7_ff8ia"]
+[ext_resource type="Texture2D" uid="uid://cnpqujbp5dx7n" path="res://assets/ui/return.png" id="9_guf4o"]
+[ext_resource type="Texture2D" uid="uid://dw8swmm7axp2g" path="res://assets/backgrounds/5.png" id="10_8ku6f"]
+[ext_resource type="Texture2D" uid="uid://cep3865sfhi26" path="res://assets/ui/exit.png" id="10_e5dqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2dvn"]
+size = Vector2(1269.5, 20)
+
+[sub_resource type="Animation" id="Animation_cffj5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Combos:theme:Label/colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Combos:theme:Label/colors/font_outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Combos:theme:Label/colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Combos:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Combos:theme:Label/colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("%Combos:theme:Label/colors/font_outline_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("%Combos:theme:Label/colors/font_shadow_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b1x7m"]
+resource_name = "combo"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Combos:theme:Label/colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.498039), Color(1, 1, 1, 1), Color(1, 1, 1, 0.498039)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Combos:theme:Label/colors/font_outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.498039), Color(0, 0, 0, 1), Color(0, 0, 0, 0.498039)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Combos:theme:Label/colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 0.2, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.498039), Color(0, 0, 0, 1), Color(0, 0, 0, 0.498039)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Combos:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_edaj5"]
+resource_name = "idle_combo"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Combos:theme:Label/colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%Combos:theme:Label/colors/font_outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Combos:theme:Label/colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3kvpc"]
+_data = {
+"RESET": SubResource("Animation_cffj5"),
+"combo": SubResource("Animation_b1x7m"),
+"idle_combo": SubResource("Animation_edaj5")
+}
+
+[node name="level1" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_35wsd")
+
+[node name="Marker2DUP" type="Marker2D" parent="."]
+position = Vector2(640, -70)
+
+[node name="Marker2LEFT" type="Marker2D" parent="."]
+position = Vector2(490, -70)
+
+[node name="Marker2RIGHT" type="Marker2D" parent="."]
+position = Vector2(790, -70)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["despawn"]]
+position = Vector2(638, 778)
+shape = SubResource("RectangleShape2D_l2dvn")
+debug_color = Color(0.788033, 0.418287, 0.284938, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Up" parent="." instance=ExtResource("2_vr3me")]
+position = Vector2(640, 651)
+
+[node name="Left" parent="." instance=ExtResource("3_h33bk")]
+position = Vector2(490, 651)
+
+[node name="Right" parent="." instance=ExtResource("4_uspm8")]
+position = Vector2(790, 651)
+
+[node name="Click1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4uq4r")
+volume_db = -10.0
+pitch_scale = 0.01
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_gc6gd")
+volume_db = -5.622
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.901961)
+z_index = -1
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("10_8ku6f")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="AnimationCombos" type="AnimationPlayer" parent="Labels"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_3kvpc")
+}
+autoplay = "idle_combo"
+
+[node name="Combos" type="Label" parent="Labels"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.182
+anchor_top = 0.373
+anchor_right = 0.182
+anchor_bottom = 0.373
+offset_left = -86.96
+offset_top = 91.44
+offset_right = 164.04
+offset_bottom = 154.44
+rotation = -0.404916
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("7_ff8ia")
+text = "COMBO X #"
+metadata/_edit_use_anchors_ = true
+
+[node name="Aciertos" type="Label" parent="Labels"]
+unique_name_in_owner = true
+offset_left = 23.0
+offset_top = 21.0
+offset_right = 394.0
+offset_bottom = 67.0
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Aciertos: "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Labels"]
+anchors_preset = -1
+anchor_left = 0.691
+anchor_top = 0.549
+anchor_right = 0.914
+anchor_bottom = 0.695
+offset_left = 66.52
+offset_top = -167.28
+offset_right = 36.08
+offset_bottom = -126.4
+
+[node name="HBBien" type="HBoxContainer" parent="Labels/VBoxContainer"]
+layout_mode = 2
+
+[node name="Bien" type="Label" parent="Labels/VBoxContainer/HBBien"]
+layout_mode = 2
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0, 0.219608, 0.858824, 0.909804)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Bien : "
+
+[node name="BienScore" type="Label" parent="Labels/VBoxContainer/HBBien"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0, 0.219608, 0.858824, 0.909804)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+
+[node name="HBExcelente" type="HBoxContainer" parent="Labels/VBoxContainer"]
+layout_mode = 2
+
+[node name="Excelente" type="Label" parent="Labels/VBoxContainer/HBExcelente"]
+layout_mode = 2
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0, 0.559168, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Excelente : "
+
+[node name="ExcelenteScore" type="Label" parent="Labels/VBoxContainer/HBExcelente"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0, 0.559168, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+
+[node name="HBPerfecto" type="HBoxContainer" parent="Labels/VBoxContainer"]
+layout_mode = 2
+
+[node name="Perfecto" type="Label" parent="Labels/VBoxContainer/HBPerfecto"]
+layout_mode = 2
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0.815686, 0.741176, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Perfecto : "
+
+[node name="PerfectoScore" type="Label" parent="Labels/VBoxContainer/HBPerfecto"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0.815686, 0.741176, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+
+[node name="Buttons" type="HBoxContainer" parent="Labels"]
+process_mode = 3
+z_index = 1
+offset_left = 1064.0
+offset_top = 608.0
+offset_right = 1268.0
+offset_bottom = 708.0
+
+[node name="reset" type="TextureButton" parent="Labels/Buttons"]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("9_guf4o")
+stretch_mode = 5
+
+[node name="home" type="TextureButton" parent="Labels/Buttons"]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("10_e5dqy")
+stretch_mode = 5
+
+[node name="Nivel" type="Label" parent="Labels"]
+unique_name_in_owner = true
+offset_left = 1096.0
+offset_top = 11.0
+offset_right = 1240.0
+offset_bottom = 57.0
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0.903598, 0.903598, 0.903598, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "nivel0"
+
+[node name="Contador" type="Label" parent="Labels"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = -1
+anchor_right = 0.031
+anchor_bottom = 0.032
+offset_left = 32.0
+offset_top = 108.0
+offset_right = 148.32
+offset_bottom = 160.96
+theme = ExtResource("7_ff8ia")
+theme_override_colors/font_color = Color(0.762404, 0.762404, 0.762404, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "asdasd"
+
+[node name="Fin" type="Node" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="up_score" from="Up" to="." method="_on_up_up_score"]
+[connection signal="left_score" from="Left" to="." method="_on_left_left_score"]
+[connection signal="right_score" from="Right" to="." method="_on_right_right_score"]
+[connection signal="finished" from="Song" to="." method="_on_song_finished"]
+[connection signal="pressed" from="Labels/Buttons/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Labels/Buttons/home" to="." method="_on_home_pressed"]

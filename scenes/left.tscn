@@ -1,0 +1,208 @@
+[gd_scene load_steps=14 format=3 uid="uid://bmeuuj3nq26em"]
+
+[ext_resource type="Script" path="res://scripts/left.gd" id="1_4v26l"]
+[ext_resource type="Texture2D" uid="uid://dq3d0r5acgwg6" path="res://assets/left_d.png" id="2_pmiug"]
+[ext_resource type="AudioStream" uid="uid://derxq22qti4fl" path="res://assets/snap.wav" id="3_28rb2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hid3t"]
+radius = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e56uh"]
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jc8wj"]
+radius = 25.0
+
+[sub_resource type="Animation" id="Animation_6f3uu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lup1l"]
+resource_name = "bien"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(3, 3), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.423529, 0.658824, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_aesnb"]
+resource_name = "error"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(3, 3), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 2.2974, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.996078, 0.427451, 0.384314, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m7o20"]
+resource_name = "excelente"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(3, 3), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.478767, 0.98856, 0.13629, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_10cqg"]
+resource_name = "idle"
+length = 0.1
+
+[sub_resource type="Animation" id="Animation_6whwi"]
+resource_name = "perfecto"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(3, 3), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 2.2974, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.984314, 0.988235, 0.137255, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a0qfc"]
+_data = {
+"RESET": SubResource("Animation_6f3uu"),
+"bien": SubResource("Animation_lup1l"),
+"error": SubResource("Animation_aesnb"),
+"excelente": SubResource("Animation_m7o20"),
+"idle": SubResource("Animation_10cqg"),
+"perfecto": SubResource("Animation_6whwi")
+}
+
+[node name="Left" type="Area2D"]
+script = ExtResource("1_4v26l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_pmiug")
+
+[node name="ColBien" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hid3t")
+
+[node name="Area2DExcelente" type="Area2D" parent="."]
+
+[node name="ColExcelente" type="CollisionShape2D" parent="Area2DExcelente"]
+position = Vector2(0, 15)
+shape = SubResource("CircleShape2D_e56uh")
+debug_color = Color(0.325169, 0.612836, 0.344528, 0.42)
+
+[node name="Area2DPerfecto" type="Area2D" parent="."]
+
+[node name="ColPerfecto" type="CollisionShape2D" parent="Area2DPerfecto"]
+position = Vector2(0, 29)
+shape = SubResource("CircleShape2D_jc8wj")
+debug_color = Color(0.844837, 0.312066, 0.556438, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a0qfc")
+}
+autoplay = "idle"
+
+[node name="Click1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_28rb2")
+volume_db = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Area2DExcelente" to="." method="_on_area_2d_excelente_body_entered"]
+[connection signal="body_exited" from="Area2DExcelente" to="." method="_on_area_2d_excelente_body_exited"]
+[connection signal="body_entered" from="Area2DPerfecto" to="." method="_on_area_2d_perfecto_body_entered"]
+[connection signal="body_exited" from="Area2DPerfecto" to="." method="_on_area_2d_perfecto_body_exited"]
